@@ -20,7 +20,7 @@ public class Material {
     return name;
   }
 
-  public void setName() {
+  public void setName(String name) {
     this.name = name;
   }
 
@@ -28,7 +28,7 @@ public class Material {
     return costPerGram;
   }
 
-  public void setCostPerGram() {
+  public void setCostPerGram(BigDecimal costPerGram) {
     this.costPerGram = costPerGram;
   }
 
