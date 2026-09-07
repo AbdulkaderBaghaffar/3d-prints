@@ -1,10 +1,11 @@
 package com.example.costestimator.controller;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.web.bind.annotation.ResponseStatus;
 import com.example.costestimator.data.Upload;
 
 import java.math.BigDecimal;
@@ -24,6 +25,7 @@ public class UploadController {
   }
 
   @PostMapping("/uploads")
+  @ResponseStatus(HttpStatus.CREATED)
   public Upload addUpload(@RequestBody Upload upload) { // return type material from JSON made from Upload
                                                         // object
     upload.setId(nextId);

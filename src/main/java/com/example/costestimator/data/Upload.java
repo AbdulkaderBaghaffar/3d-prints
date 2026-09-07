@@ -3,12 +3,23 @@ package com.example.costestimator.data;
 import java.math.BigDecimal;
 import java.time.Instant;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Upload {
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
   private String fileName; // to be changed later in M4 for actual file type
   private Long materialId;
   private BigDecimal estimatedPrice;
   private Instant createdAt;
+
+  public Upload() {
+  }
 
   public Long getId() {
     return id;
