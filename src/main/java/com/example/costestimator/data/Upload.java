@@ -13,7 +13,7 @@ public class Upload {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
-  private String fileName; // to be changed later in M4 for actual file type
+  private String filename; // to be changed later in M4 for actual file type
   private Long materialId;
   private BigDecimal estimatedPrice;
   private Instant createdAt;
@@ -29,12 +29,12 @@ public class Upload {
     this.id = id;
   }
 
-  public String getFileName() {
-    return fileName;
+  public String getFilename() {
+    return filename;
   }
 
-  public void setFileName(String fileName) {
-    this.fileName = fileName;
+  public void setFilename(String filename) {
+    this.filename = filename;
   }
 
   public Long getMaterialId() {
